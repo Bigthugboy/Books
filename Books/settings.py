@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 DJANGO_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,15 +40,16 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 THIRD_PARTY_APPS = [
-    "debug_toolbar"
+    "debug_toolbar",
+    'rest_framework',
 ]
 
 LOCAL_APPS = [
-    'first_app.apps.FirstAppConfig'
+    'Books.app.BookAdminConfig',
+    'first_app.apps.FirstAppConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
-
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
